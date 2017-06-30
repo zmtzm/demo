@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="dist/css/bootstrap.css">
+	<script src="dist/js/jquery-1.11.3.min.js"></script>
+	<script src="dist/js/bootstrap.js"></script>
+	<style>
+		.ImgItem{ width: 50px;}
+		.margin_0{margin-top: 0;}
+		footer{text-align: center;padding-top: 20px;}
+		.page_header{margin: 0;}
+		.title{margin-top: 10px;}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+	  <div class="container">  
+	    <div class="navbar-header">
+	     	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+	        </button>
+	    	<a class="navbar-brand" href="#">OA办公系统</a>
+	    </div>  
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li><a href="index.html"><span class="glyphicon glyphicon-home"></span>&nbsp;管理首页 <span class="sr-only">(current)</span></a></li>
+				<li><a href="user.html"><span class="glyphicon glyphicon-user"></span>&nbsp;用户管理</a></li>
+				<li  class="active"><a href="cont.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;内容管理</a></li>
+				<li><a href="label.html"><span class="glyphicon glyphicon-tag"></span>&nbsp;标签管理</a></li>
+				<li><a href="email.html"><span class="glyphicon glyphicon-envelope"></span>&nbsp;我的邮箱</a></li>
+			</ul>
+		    <ul class="nav navbar-nav navbar-right">
+		    	<li><img src="img/touxiang.jpg" alt="" class="ImgItem"></li>
+		        <li class="dropdown">       	
+		        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">管理员 <span class="caret">
+		       		</span></a>
+		        <ul class="dropdown-menu">
+		            <li><a href="#"><span class="glyphicon glyphicon-cog"></span>&nbsp;用户中心</a></li>
+		            <li><a href="#"><span class="glyphicon glyphicon-send"></span>&nbsp;用户建议</a></li>
+		            <li><a href="#"><span class="glyphicon glyphicon-cloud-upload"></span>&nbsp;客户介绍</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#"><span class="glyphicon glyphicon-ice-lolly"></span>&nbsp;退出</a></li>
+		      	</ul>
+		        </li>
+		    </ul>
+	    </div>
+	  </div>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2">
+				<div class="list-group">	
+					<a href="cont.html" class="list-group-item">内容管理</a>
+					<a href="add_cont.html" class="list-group-item  active">添加内容</a>
+				</div>
+			</div>
+			<div class="col-md-10">
+				<div class="page-header page_header">
+				  <h4>用户管理</h4>
+				</div>
+				<ul class="nav nav-tabs">
+				  	<li role="presentation"><a href="cont.html">内容管理</a></li>
+				  	<li role="presentation" class="active"><a href="add_cont.html">添加内容</a></li>
+				</ul> 
+				<form>
+				  <div class="form-group title">
+				    <label for="title">标题</label>
+				   		<input type="email" class="form-control" id="title" placeholder="请输入文章标题">
+				  	</div>
+				  	<div class="form-group">
+				    	<label for="textarea">文章内容</label>
+				    	<textarea class="form-control" rows="14" id="textarea" placeholder="请输入文章正文部分"></textarea>
+				  	</div>
+					<div class="checkbox">
+					  <label>
+					    <input type="checkbox" value="">
+					    全局置顶
+					  </label>
+					  <button class="pull-right btn btn-default" type="button">发布文章</button>
+					</div>
+				</form>  
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container">
+			联系方式
+		</div>	
+	</footer>
+</body>
+</html>
+
+
+
+

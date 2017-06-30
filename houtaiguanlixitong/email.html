@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="dist/css/bootstrap.css">
+	<script src="dist/js/jquery-1.11.3.min.js"></script>
+	<script src="dist/js/bootstrap.js"></script>
+	<style>
+		.ImgItem{ width: 50px;}
+		.margin_0{margin-top: 0;}
+		.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td { vertical-align: middle;}
+		footer{text-align: center;padding-top: 20px;}
+		.margin_10{margin-top: 10px;}
+		.myform{border: 1px solid #eee;border-top: none;padding:15px;}
+		.btn_margin{margin: 15px;}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+	  <div class="container">  
+	    <div class="navbar-header">
+	     	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+	        </button>
+	    	<a class="navbar-brand" href="#">OA办公系统</a>
+	    </div>  
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span>&nbsp;管理首页 <span class="sr-only">(current)</span></a></li>
+				<li><a href="user.html"><span class="glyphicon glyphicon-user"></span>&nbsp;用户管理</a></li>
+				<li><a href="cont.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;内容管理</a></li>
+				<li><a href="label.html"><span class="glyphicon glyphicon-tag"></span>&nbsp;标签管理</a></li>
+				<li class="active"><a href="email.html"><span class="glyphicon glyphicon-envelope"></span>&nbsp;我的邮箱</a></li>
+			</ul>
+		    <ul class="nav navbar-nav navbar-right">
+		    	<li><img src="img/touxiang.jpg" alt="" class="ImgItem"></li>
+		        <li class="dropdown">       	
+		        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">管理员 <span class="caret">
+		       		</span></a>
+		        <ul class="dropdown-menu">
+		            <li><a href="#"><span class="glyphicon glyphicon-cog"></span>&nbsp;用户中心</a></li>
+		            <li><a href="#"><span class="glyphicon glyphicon-send"></span>&nbsp;用户建议</a></li>
+		            <li><a href="#"><span class="glyphicon glyphicon-cloud-upload"></span>&nbsp;客户介绍</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#"><span class="glyphicon glyphicon-ice-lolly"></span>&nbsp;退出</a></li>
+		      	</ul>
+		        </li>
+		    </ul>
+	    </div>
+	  </div>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				  <div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="headingOne">
+				      <h4 class="panel-title">
+				        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> 最近联系人</a>				         			        
+				      </h4>
+				    </div>
+				    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+				      <div class="panel-body">
+				       		<ul class="list-group">
+							    <li class="list-group-item"><a href="##"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;&nbsp;赵飞燕</a></li>
+							    <li class="list-group-item"><a href="##"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;&nbsp;王晓鸥</a></li>
+							    <li class="list-group-item"><a href="##"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;&nbsp;张惠妹</a></li>
+							    <li class="list-group-item"><a href="##"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;&nbsp;李耀欣</a></li>
+							    <li class="list-group-item"><a href="##"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;&nbsp;付凤梧</a></li>
+							    <li class="list-group-item"><a href="##"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;&nbsp;陈安麟</a></li>
+							    <li class="list-group-item"><a href="##"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;&nbsp;张孟韬</a></li>
+							</ul>
+				      </div>
+				    </div>
+				  </div>
+				  <div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="headingTwo">
+				      <h4 class="panel-title">
+				        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+				          我的同事
+				        </a>
+				      </h4>
+				    </div>
+				    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+				      <div class="panel-body">
+				        	<ul class="list-group">
+							    <li class="list-group-item"><a href="##"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;&nbsp;赵飞燕</a></li>
+							    <li class="list-group-item"><a href="##"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;&nbsp;袁杰</a></li>
+							    <li class="list-group-item"><a href="##"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;&nbsp;张其鹏</a></li>
+							    <li class="list-group-item"><a href="##"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;&nbsp;李耀欣</a></li>
+							    <li class="list-group-item"><a href="##"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;&nbsp;付凤梧</a></li>
+							    <li class="list-group-item"><a href="##"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;&nbsp;陈安麟</a></li>
+							    <li class="list-group-item"><a href="##"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;&nbsp;张孟韬</a></li>
+							</ul>
+				      </div>
+				    </div>
+				  </div>
+				  <div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="headingThree">
+				      <h4 class="panel-title">
+				        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+				          我的客户
+				        </a>
+				      </h4>
+				    </div>
+				    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+				      <div class="panel-body">
+				    		<ul class="list-group">
+							    <li class="list-group-item"><a href="##"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;&nbsp;赵飞燕</a></li>
+							    <li class="list-group-item"><a href="##"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;&nbsp;王晓鸥</a></li>
+							    <li class="list-group-item"><a href="##"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;&nbsp;张惠妹</a></li>
+							    <li class="list-group-item"><a href="##"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;&nbsp;李耀欣</a></li>
+							    <li class="list-group-item"><a href="##"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;&nbsp;付凤梧</a></li>
+							    <li class="list-group-item"><a href="##"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;&nbsp;陈安麟</a></li>
+							    <li class="list-group-item"><a href="##"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;&nbsp;张孟韬</a></li>
+							</ul>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-9">
+				<div class="panel panel-default">
+				  	<div class="panel-heading">已读邮件</div>			  		
+		   			<ul class="list-group">
+					  	<li class="list-group-item"><a href="##"><span class="glyphicon glyphicon-check"></span>&nbsp;&nbsp;响应式Web设计工作原理 <time class="pull-right">2015/08/08</time></a></li>
+					  	<li class="list-group-item"><a href="##"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;响应式Web设计工作原理<time class="pull-right">2015/08/08</time></a></li>
+					  	<li class="list-group-item"><a href="##"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;响应式Web设计工作原理<time class="pull-right">2015/08/08</time></a></li>
+					  	<li class="list-group-item"><a href="##"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;响应式Web设计工作原理<time class="pull-right">2015/08/08</time></a></li>
+					  	<li class="list-group-item"><a href="##"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;响应式Web设计工作原理<time class="pull-right">2015/08/08</time></a></li>
+					</ul>			 		
+				</div>
+			</div>
+		</div>
+		<nav aria-label="Page navigation" class="text-center">
+			<ul class="pagination">
+				<li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+				<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#" aria-label="Next">    				
+					<span aria-hidden="true">&raquo;</span></a>    
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<footer>
+		<div class="container">联系方式</div>		
+	</footer>
+</body>
+</html>
+
+
+
+

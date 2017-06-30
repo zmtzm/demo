@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="dist/css/bootstrap.css">
+	<script src="dist/js/jquery-1.11.3.min.js"></script>
+	<script src="dist/js/bootstrap.js"></script>
+	<style>
+		.ImgItem{ width: 50px;}
+		.margin_0{margin-top: 0;}
+		.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td { vertical-align: middle;}
+		footer{text-align: center;padding-top: 20px;}
+		.margin_10{margin-top: 10px;}
+		.myform{border: 1px solid #eee;border-top: none;padding:15px;}
+		.btn_margin{margin: 15px;}
+		.page_header{margin: 0;}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+	  <div class="container">  
+	    <div class="navbar-header">
+	     	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+	        </button>
+	    	<a class="navbar-brand" href="#">OA办公系统</a>
+	    </div>  
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li><a href="index.html"><span class="glyphicon glyphicon-home"></span>&nbsp;管理首页 <span class="sr-only">(current)</span></a></li>
+				<li><a href="user.html"><span class="glyphicon glyphicon-user"></span>&nbsp;用户管理</a></li>
+				<li  class="active"><a href="cont.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;内容管理</a></li>
+				<li><a href="label.html"><span class="glyphicon glyphicon-tag"></span>&nbsp;标签管理</a></li>
+				<li><a href="email.html"><span class="glyphicon glyphicon-envelope"></span>&nbsp;我的邮箱</a></li>
+			</ul>
+		    <ul class="nav navbar-nav navbar-right">
+		    	<li><img src="img/touxiang.jpg" alt="" class="ImgItem"></li>
+		        <li class="dropdown">       	
+		        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">管理员 <span class="caret">
+		       		</span></a>
+		        <ul class="dropdown-menu">
+		            <li><a href="#"><span class="glyphicon glyphicon-cog"></span>&nbsp;用户中心</a></li>
+		            <li><a href="#"><span class="glyphicon glyphicon-send"></span>&nbsp;用户建议</a></li>
+		            <li><a href="#"><span class="glyphicon glyphicon-cloud-upload"></span>&nbsp;客户介绍</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#"><span class="glyphicon glyphicon-ice-lolly"></span>&nbsp;退出</a></li>
+		      	</ul>
+		        </li>
+		    </ul>
+	    </div>
+	  </div>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2">
+				<div class="list-group">	
+					<a href="cont.html" class="list-group-item active">内容管理</a>
+					<a href="add_cont.html" class="list-group-item">添加内容</a>
+				</div>
+			</div>
+			<div class="col-md-10">
+				<div class="page-header page_header">
+				  <h4>用户管理</h4>
+				</div>
+				<ul class="nav nav-tabs">
+				  	<li role="presentation"  class="active"><a href="cont.html">内容管理</a></li>
+				  	<li role="presentation"><a href="add_cont.html">添加内容</a></li>
+				</ul> 
+				<table class="table">
+					<thead>
+						<tr>
+							<th>文章标题</th>
+							<th>作者</th>
+							<th>发布时间</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td style="font-weight: bold;">盘点今年十大经典电影</td>
+							<td>小李飞刀</td>
+							<td>2017/08/08</td>
+							<td>
+								<div class="dropdown">
+								  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								    操作
+								    <span class="caret"></span>
+								  </button>
+								  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								    <li><a href="#">编辑</a></li>
+								    <li><a href="#">删除</a></li>
+								    <li><a href="#">锁定</a></li>
+								    <li role="separator" class="divider"></li>
+								    <li><a href="#">修改密码</a></li>
+								  </ul>
+								</div>
+							</td></tr>
+						<tr>
+							<td style="font-weight: bold;">产品经理常犯的7大错误，你造吗？</td>
+							<td>欧阳菲菲</td>
+							<td>2017/08/08</td>
+							<td>
+								<div class="dropdown">
+								  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								    操作
+								    <span class="caret"></span>
+								  </button>
+								  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								    <li><a href="#">编辑</a></li>
+								    <li><a href="#">删除</a></li>
+								    <li><a href="#">锁定</a></li>
+								    <li role="separator" class="divider"></li>
+								    <li><a href="#">修改密码</a></li>
+								  </ul>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td style="font-weight: bold;">如何正确使用python日志</td>
+							<td>梅超风</td>
+							<td>2017/08/08</td>
+							<td>
+								<div class="dropdown">
+								  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								    操作
+								    <span class="caret"></span>
+								  </button>
+								  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								    <li><a href="#">编辑</a></li>
+								    <li><a href="#">删除</a></li>
+								    <li><a href="#">锁定</a></li>
+								    <li role="separator" class="divider"></li>
+								    <li><a href="#">修改密码</a></li>
+								  </ul>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td style="font-weight: bold;">C语言const修饰符的怎么使用</td>
+							<td>梅兰芳</td>
+							<td>2017/08/08</td>
+							<td>
+								<div class="dropdown">
+								  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								    操作
+								    <span class="caret"></span>
+								  </button>
+								  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								    <li><a href="#">编辑</a></li>
+								    <li><a href="#">删除</a></li>
+								    <li><a href="#">锁定</a></li>
+								    <li role="separator" class="divider"></li>
+								    <li><a href="#">修改密码</a></li>
+								  </ul>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td style="font-weight: bold;">Android开发用onCreateOptionMenu（）如何创</td>
+							<td>极客111</td>
+							<td>2016/08/08</td>
+							<td>
+								<div class="dropdown">
+								  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								    操作
+								    <span class="caret"></span>
+								  </button>
+								  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								    <li><a href="#">编辑</a></li>
+								    <li><a href="#">删除</a></li>
+								    <li><a href="#">锁定</a></li>
+								    <li role="separator" class="divider"></li>
+								    <li><a href="#">修改密码</a></li>
+								  </ul>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td style="font-weight: bold;">怎样才能成为优秀的iOS工程师</td>
+							<td>tony</td>
+							<td>2015/08/08</td>
+							<td>
+								<div class="dropdown">
+								  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								    操作
+								    <span class="caret"></span>
+								  </button>
+								  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								    <li><a href="#">编辑</a></li>
+								    <li><a href="#">删除</a></li>
+								    <li><a href="#">锁定</a></li>
+								    <li role="separator" class="divider"></li>
+								    <li><a href="#">修改密码</a></li>
+								  </ul>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td style="font-weight: bold;">Android今年推出了些什么技术</td>
+							<td>杰克</td>
+							<td>2015/08/08</td>
+							<td>
+								<div class="dropdown">
+								  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								    操作
+								    <span class="caret"></span>
+								  </button>
+								  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								    <li><a href="#">编辑</a></li>
+								    <li><a href="#">删除</a></li>
+								    <li><a href="#">锁定</a></li>
+								    <li role="separator" class="divider"></li>
+								    <li><a href="#">修改密码</a></li>
+								  </ul>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+					
+				</table>
+
+				<nav aria-label="" class="pull-right">
+				  <ul class="pagination pagination-md">
+				    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+				    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+			        <li><a href="#">1</a></li>
+				    <li><a href="#">2</a></li>
+				    <li><a href="#">3</a></li>
+				    <li><a href="#">4</a></li>
+				    <li><a href="#">5</a></li>
+				    <li>
+				      <a href="#" aria-label="Next">
+				        <span aria-hidden="true">&raquo;</span>
+				      </a>
+				    </li>
+				  </ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<footer class="container">联系方式</footer>
+</body>
+</html>
+
+
+
+

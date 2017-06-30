@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{background-color: #000000;}
+			.gallery{width: 980px; height: 500px;}
+			.center{position:absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;}
+			.item{width: 196px; height: 100px;position:absolute; background: #fff;transition: all 1s;}
+			.pic{width:100%; height:100%; transition: all 1s;}
+		</style>
+	</head>
+	<script src="jquery-1.11.3.min.js"></script>
+	<script>
+		$(function(){
+			//函数调用
+			init();
+			showAll();
+			function init(){				
+				var gallery=$('.gallery')
+				//初始化25个div
+				for(var i=0;i<25;i++){
+					x = i%5;
+					y = parseInt(i/5)
+					$('<div class="item"><div class="pic"></div></div>')
+					.css({
+						"left":x*196+"px",
+						"top":y*100+"px"
+					})
+					.appendTo(gallery);
+				};
+				
+			};
+					
+			
+			// 插入小图片
+			function showAll(){
+				$('.item').each(function(index){
+					var x=index%5;
+					var y=parseInt(index/5);
+					var deg=Math.random()*60-30;
+					$(this).css({
+						"transform":"translate("+(x-2)*50+"px ,"+(y-2)*50+"px) rotate("+deg+"deg)"						
+					})
+					$(this).find('.pic').css({
+						"background-image":"url(images/"+(index+1)+".jpg",
+						"background-size":"contain",
+						"transform":"scale(0.95,0.9)"	
+					})
+				});
+				
+			};
+			
+			
+			//让25个小图片变成其中一个单图
+			function showItem(index){				
+				$('.item').each(function(i){
+					var x=i%5;
+					var y=parseInt(i/5);				
+					$(this).css({
+						"transform":"translate(0px,0px) rotate(0deg)"
+					})
+					$(this).find('.pic').css({
+						"background-position":x*(-196)+"px "+y*(-100)+"px",
+						"background-size":"auto",
+						"background-image":"url(images/"+(index+1)+".jpg",
+						"transform":"scale(1)"
+						
+					})
+										
+				})
+				
+			};
+			
+			//让图片在大小图之间切换
+			var ispicAll=true;
+			$('.item').click(function(){
+				var index=$(this).index();
+				if(ispicAll){
+					showItem(index)
+				}else{
+					showAll()
+				}
+				ispicAll =! ispicAll;
+			});
+						
+		});
+	</script>
+	<body>
+		 <div class="gallery center"></div>
+	</body>
+</html>

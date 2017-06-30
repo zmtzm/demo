@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			html,body{height:100%;}
+			.center{position:absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;}
+			.slide{width: 980px; height: 500px;transform-style:preserve-3d; perspective: 3000px;}
+			
+			.pic{height: 100%;position: absolute;top: 0;}
+		
+		</style>
+	</head>
+	<script src="jquery-1.11.3.min.js"></script>
+	<script>
+		$(function(){
+		//插入div初始化	
+			var slide=$('.slide')	
+			
+			for(var i=0;i<4;i++){				
+				$("<div class='item'></div>")			
+				.appendTo(slide)
+			};
+			var count=5;
+			var w=slide.width()/count;
+			var start=false;
+			$('.item').each(function(index){
+				var deg=index*90;
+				for(var i=0;i<count;i++){
+					var x=i*w;
+					$("<div class='pic'></div>")
+					.width(w)
+					.css({
+						"left":x+"px",
+						"background-image":"url(img/"+index+".jpg)",
+						"background-position":(-x) +"px 0px",
+						"transform":"rotateX("+deg+"deg) translateZ(250px)"
+					})
+					.appendTo(this)
+				}
+				
+				
+			});
+			
+			var num=0;
+			$('body').click(function(){
+
+				if(start){return;}
+				
+				start = true;
+				
+				num++;
+				$('.item').each(function(index){
+					var deg=index*90-num*90;
+					$(this).find('.pic').each(function(i){
+						var delay=i*0.2;
+						$(this).css({
+							"transition":"transform .5s "+delay+"s",
+							"transform":"rotateX("+deg+"deg) translateZ(250px)"
+						})
+					
+					})
+				})
+				
+				setTimeout(function(){
+					
+					start=false;
+					
+				},1500)	
+				
+			});
+			
+						
+				
+			
+			
+		});
+	</script>
+	<body>
+		<div class="slide center"></div>
+	</body>
+</html>
